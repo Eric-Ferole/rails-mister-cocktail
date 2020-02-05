@@ -1,8 +1,30 @@
-<h1>Bonjour les cocococktails !</h1>
-
+<div class="nav_container">
+<div class="logo">
+  <%= image_tag "LogoMisterCocktail.svg", width: 230 %>
+</div>
+<div class="my_nav">
+  <ul>
+    <li>Cocktails</li>
+    <li>Ingredient</li>
+    <li>Doses</li>
+  </ul>
+  </div>
+  <div class="btn_box">
+    <%= link_to "Add a cocktail", new_path, :class => "btn_large" %>
+  </div>
+</div>
+<div class="cocktail_card">
+<div class="cocktail_img_box">
+<%= image_tag "bloodynade_web.png", width: 150 %>
+</div>
+<div class="cocktail_name">
+  <% @cocktails.each do |cocktail| %>
+  <h2><%= cocktail.name %></h2>
+  <% end %>
+</div>
+<div class="cocktail_btn"></div>
 <% @cocktails.each do |cocktail| %>
-<h2><%= cocktail.name %></h2>
-<%= link_to "View the cocktail", cocktail_path(cocktail) %>
-<%= link_to "Delete", cocktail_path(cocktail), method: :delete %> <br>
+<%= link_to "View the cocktail", cocktail_path(cocktail), :class => "btn_small" %>
+<%= link_to "Delete", cocktail_path(cocktail), :class => "btn_small", :method => :delete %> <br>
 <% end %>
-<%= link_to "Add a cocktail", new_path %>
+</div>
