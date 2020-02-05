@@ -1,0 +1,10 @@
+<h1>New cocococktail</h1>
+
+<%= form_for @cocktail do |f| %>
+
+        <%= f.label :name, "Enter a name" %> <br>
+        <%= f.text_field :name %> <br>
+
+<%= f.submit %>
+<% end %>
+<%= link_to "Back to cocktails", cocktails_path %>

@@ -1,0 +1,8 @@
+<h1>Bonjour les cocococktails !</h1>
+
+<% @cocktails.each do |cocktail| %>
+<h2><%= cocktail.name %></h2>
+<%= link_to "View the cocktail", cocktail_path(cocktail) %>
+<%= link_to "Delete", cocktail_path(cocktail), method: :delete %> <br>
+<% end %>
+<%= link_to "Add a cocktail", new_path %>
