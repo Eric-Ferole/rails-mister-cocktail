@@ -1,30 +1,27 @@
 <div class="nav_container">
-<div class="logo">
-  <%= image_tag "LogoMisterCocktail.svg", width: 230 %>
-</div>
-<div class="my_nav">
-  <ul>
-    <li>Cocktails</li>
-    <li>Ingredient</li>
-    <li>Doses</li>
-  </ul>
+  <div class="logo">
+    <%= image_tag "LogoMisterCocktail.svg", width: 230 %>
   </div>
-  <div class="btn_box">
-    <%= link_to "Add a cocktail", new_path, :class => "btn_large" %>
-  </div>
+	  <div class="my_nav">
+	    <ul>
+	      <li>Cocktails</li>
+	      <li>Ingredient</li>
+	      <li>Doses</li>
+	    </ul>
+	  <div class="btn_box">
+	      <%= link_to "Add a cocktail", new_path, :class => "btn_large" %>
+	  </div>
+	  </div>
 </div>
-<div class="cocktail_card">
-<div class="cocktail_img_box">
-<%= image_tag "bloodynade_web.png", width: 150 %>
-</div>
-<div class="cocktail_name">
-  <% @cocktails.each do |cocktail| %>
-  <h2><%= cocktail.name %></h2>
-  <% end %>
-</div>
-<div class="cocktail_btn"></div>
-<% @cocktails.each do |cocktail| %>
-<%= link_to "View the cocktail", cocktail_path(cocktail), :class => "btn_small" %>
-<%= link_to "Delete", cocktail_path(cocktail), :class => "btn_small", :method => :delete %> <br>
-<% end %>
+<div class="body_container">
+		<% @cocktails.each do |cocktail| %>
+				<div class="cocktail_card">
+					<%= image_tag "laruche_web.png", width: 200 %>
+			  	<h2><%= cocktail.name %></h2>
+				<div class="cocktail_btn">
+					<%= link_to "View the cocktail", cocktail_path(cocktail), :class => "btn_small" %>
+					<%= link_to "Delete", cocktail_path(cocktail), :class => "btn_small", :method => :delete %>
+				</div>
+			</div>
+		<% end %>
 </div>

@@ -8,29 +8,57 @@ body {
   margin-right: 40px;
   margin-left: 40px;
 }
+
 .logo {
-  border: 1px solid #979797;
+  // border: 1px solid #979797;
 }
 
 .my_nav {
-  border: 1px solid #979797;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  // border: 1px solid #979797;
+}
+
+.my_nav:nth-child(2) ul {
+  margin-right: 40px;
+}
+
+.body_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // border: 1px solid #979797;
 }
 
 .cocktail_card {
-  height: 496px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 476px;
   width: 304px;
-  border: 1px solid #979797;
+  background-image: url("circle-bg.svg");
+  background-repeat: no-repeat;
+  // border: 1px solid #979797;
 }
+
 .nav_container {
-    display: flex;
-    align-items: center;
-    height: 230px;
-    border: 1px solid #979797;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 230px;
+  // border: 1px solid #979797;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
 }
 
 ul li {
   display: inline;
-  padding: 20px 31px;
+  padding: 0px 31px;
   font-family: Futura-Bold;
   font-size: 12px;
   color: #302E2F;
@@ -38,7 +66,7 @@ ul li {
   text-transform: uppercase;
   list-style-type: none;
   text-decoration: none;
-  border: 1px solid #979797
+  // border: 1px solid #979797
 }
 
 h2 {
@@ -60,7 +88,7 @@ h2 {
   }
 
 .btn_small {
-    border: 1px solid #B90045;
+    background: #FFFFFF;
     border-radius: 26px;
     font-family: Futura-Medium;
     font-size: 13px;
@@ -68,7 +96,14 @@ h2 {
     text-align: center;
     padding: 8px 22px;
 }
+
 .btn_box {
-  border: 1px solid #979797;
+  // border: 1px solid #979797;
 }
 
+.cocktail_btn {
+  // border: 1px solid #979797;
+}
+.cocktail_name {
+  // border: 1px solid #979797;
+}
